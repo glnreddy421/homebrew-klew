@@ -11,19 +11,16 @@ brew install klew
 open "$(brew --prefix)/opt/klew/Klew.app"
 ```
 
+Installs the signed, notarized **macOS arm64** build from GitHub Releases.
+
 ## Updating formulas (maintainers)
 
-On each **klew** release:
+On each **klew** release tag, GitHub Actions updates `Formula/klew.rb` here automatically when `HOMEBREW_TAP_TOKEN` is configured on the main repo.
 
-1. Tag `vX.Y.Z` on [glnreddy421/klew](https://github.com/glnreddy421/klew).
-2. Copy `packaging/homebrew/klew.rb` from **klew** into `Formula/klew.rb` here.
-3. Update `version` and `sha256`.
-4. Commit and push **homebrew-klew**.
-
-Checksum:
+Manual bump (if needed):
 
 ```bash
-curl -L "https://github.com/glnreddy421/klew/archive/refs/tags/vX.Y.Z.tar.gz" | shasum -a 256
+shasum -a 256 Klew-X.Y.Z-macos-arm64.zip
 ```
 
 ## License
