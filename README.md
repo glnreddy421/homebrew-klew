@@ -7,18 +7,10 @@ Separate repo from the app — formulas only.
 ## Install
 
 ```bash
-brew tap glnreddy421/klew-homebrew
+brew tap glnreddy421/klew https://github.com/glnreddy421/klew-homebrew
 brew install klew
 open "$(brew --prefix)/opt/klew/Klew.app"
 ```
-
-Install latest from `main` before the first stable tag:
-
-```bash
-brew install --HEAD klew
-```
-
-Only needed if you have not yet published a stable release tag in the formula.
 
 ## Go install (alternative)
 
