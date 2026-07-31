@@ -1,13 +1,11 @@
-# klew-homebrew
+# homebrew-klew
 
 Homebrew tap for [Klew](https://github.com/glnreddy421/klew).
-
-Separate repo from the app — formulas only.
 
 ## Install
 
 ```bash
-brew tap glnreddy421/klew https://github.com/glnreddy421/klew-homebrew
+brew tap glnreddy421/klew
 brew install klew
 open "$(brew --prefix)/opt/klew/Klew.app"
 ```
@@ -27,7 +25,7 @@ On each **klew** release:
 1. Tag `vX.Y.Z` on [glnreddy421/klew](https://github.com/glnreddy421/klew).
 2. Copy `packaging/homebrew/klew.rb` from **klew** into `Formula/klew.rb` here.
 3. Update `version` and `sha256`.
-4. Commit and push **klew-homebrew**.
+4. Commit and push **homebrew-klew**.
 
 Checksum:
 
