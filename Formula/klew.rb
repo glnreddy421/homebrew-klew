@@ -3,6 +3,7 @@ class Klew < Formula
   homepage "https://github.com/glnreddy421/klew"
   license "Apache-2.0"
   version "0.1.4"
+  revision 1
 
   depends_on :macos
 
@@ -14,7 +15,9 @@ class Klew < Formula
   end
 
   def install
-    prefix.install "Klew.app"
+    odie "Klew.app not found in #{buildpath}" unless (buildpath/"Klew.app").directory?
+
+    prefix.install buildpath/"Klew.app"
   end
 
   def caveats
