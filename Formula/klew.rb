@@ -3,7 +3,7 @@ class Klew < Formula
   homepage "https://github.com/glnreddy421/klew"
   license "Apache-2.0"
   version "0.1.4"
-  revision 2
+  revision 3
 
   depends_on :macos
 
@@ -15,16 +15,17 @@ class Klew < Formula
   end
 
   def install
-    if (buildpath/"Contents/MacOS").directory?
-      prefix.install buildpath
-    elsif (buildpath/"Klew.app").directory?
-      prefix.install buildpath/"Klew.app"
+    root = staged_path
+    app = if (root/"Klew.app").directory?
+      root/"Klew.app"
+    elsif (root/"Contents/MacOS").directory?
+      root
     else
-      app = buildpath.glob("*.app").first
-      odie "Klew.app not found under #{buildpath}" unless app
-
-      prefix.install app
+      root.glob("*.app").first
     end
+    odie "Klew.app not found under #{root}" unless app&.directory?
+
+    prefix.install app => "Klew.app"
   end
 
   def caveats
