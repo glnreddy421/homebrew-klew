@@ -18,6 +18,8 @@ Install latest from `main` before the first stable tag:
 brew install --HEAD klew
 ```
 
+Only needed if you have not yet published a stable release tag in the formula.
+
 ## Go install (alternative)
 
 ```bash
