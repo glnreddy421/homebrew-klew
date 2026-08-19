@@ -3,6 +3,7 @@ class Klew < Formula
   homepage "https://github.com/glnreddy421/klew"
   license "Apache-2.0"
   version "0.1.5"
+  revision 1
 
   depends_on :macos
 
@@ -14,9 +15,7 @@ class Klew < Formula
   end
 
   def install
-    app = if (buildpath/"Contents/MacOS").directory?
-      buildpath
-    elsif (buildpath/"Klew.app").directory?
+    app = if (buildpath/"Klew.app").directory?
       buildpath/"Klew.app"
     else
       buildpath.glob("*.app").first
@@ -24,6 +23,8 @@ class Klew < Formula
     odie "Klew.app not found under #{buildpath}" unless app&.directory?
 
     cp_r app, prefix/"Klew.app"
+    # Homebrew sandbox metadata breaks the signed app bundle seal.
+    rm_rf prefix/"Klew.app/.brew_home"
   end
 
   def caveats
@@ -39,5 +40,6 @@ class Klew < Formula
   test do
     assert_path_exists prefix/"Klew.app"
     assert_path_exists prefix/"Klew.app/Contents/MacOS/Klew"
+    system "codesign", "--verify", "--deep", "--strict", prefix/"Klew.app"
   end
 end
