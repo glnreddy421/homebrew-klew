@@ -2,15 +2,18 @@ class Klew < Formula
   desc "Klew — live Kubernetes incident investigation (desktop app)"
   homepage "https://github.com/glnreddy421/klew"
   license "Apache-2.0"
-  version "0.1.5"
-  revision 1
+  version "0.1.6"
 
   depends_on :macos
 
   on_macos do
     on_arm do
-      url "https://github.com/glnreddy421/klew/releases/download/v0.1.5/Klew-0.1.5-macos-arm64.zip"
-      sha256 "160acedc97cc089fb24bcc9925d2f96c210eace4c733b0ab60506d7241e08b1d"
+      url "https://github.com/glnreddy421/klew/releases/download/v0.1.6/Klew-0.1.6-macos-arm64.zip"
+      sha256 "2d0f6bf1147f7cab65e5a7a8b28ed5feb425f0e70e826e29265f2d0c45dc11cf"
+    end
+    on_intel do
+      url "https://github.com/glnreddy421/klew/releases/download/v0.1.6/Klew-0.1.6-macos-amd64.zip"
+      sha256 "6076ed64c9e035745dd1c43f4308fabc81552c416eeaab110126c01033d2c695"
     end
   end
 
