@@ -3,6 +3,7 @@ class Klew < Formula
   homepage "https://github.com/glnreddy421/klew"
   license "Apache-2.0"
   version "0.1.6"
+  revision 1
 
   depends_on :macos
 
@@ -18,7 +19,9 @@ class Klew < Formula
   end
 
   def install
-    app = if (buildpath/"Klew.app").directory?
+    app = if (buildpath/"Contents/MacOS").directory?
+      buildpath
+    elsif (buildpath/"Klew.app").directory?
       buildpath/"Klew.app"
     else
       buildpath.glob("*.app").first
