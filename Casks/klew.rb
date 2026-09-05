@@ -1,4 +1,3 @@
-# Template — release CI writes the live cask to glnreddy421/homebrew-klew.
 cask "klew" do
   version "0.1.7"
 
