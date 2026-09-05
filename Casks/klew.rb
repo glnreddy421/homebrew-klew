@@ -13,7 +13,6 @@ cask "klew" do
   name "Klew"
   desc "Live Kubernetes incident investigation (desktop app)"
   homepage "https://github.com/glnreddy421/klew"
-  license "Apache-2.0"
 
   app "Klew.app"
 
