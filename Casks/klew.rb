@@ -1,13 +1,13 @@
 cask "klew" do
-  version "1.3.2"
+  version "1.3.3"
 
   on_arm do
-    sha256 "656415d1f697e9de2835640f888573c8451b18247c4fe213644a1485600aa6c1"
-    url "https://github.com/glnreddy421/klew/releases/download/v1.3.2/Klew-1.3.2-macos-arm64.zip"
+    sha256 "22b30e7d5e354ad4d36d19ed094e4547f59c8fce6f81598b263b6ddf9f3465da"
+    url "https://github.com/glnreddy421/klew/releases/download/v1.3.3/Klew-1.3.3-macos-arm64.zip"
   end
   on_intel do
-    sha256 "05e0e552d0d974f53a252563c9ee128d9bcffc6647c574353dc99212d88beaf6"
-    url "https://github.com/glnreddy421/klew/releases/download/v1.3.2/Klew-1.3.2-macos-amd64.zip"
+    sha256 "8f7491e77c80c51a400babd5071b90f4712b4d4247648cc30d40758cca549c0f"
+    url "https://github.com/glnreddy421/klew/releases/download/v1.3.3/Klew-1.3.3-macos-amd64.zip"
   end
 
   name "Klew"
