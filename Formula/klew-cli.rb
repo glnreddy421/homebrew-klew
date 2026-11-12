@@ -7,22 +7,22 @@ class KlewCli < Formula
   on_macos do
     on_arm do
       url "https://github.com/glnreddy421/klew/releases/download/v2.0.0/klew-cli-2.0.0-darwin-arm64.tar.gz"
-      sha256 "8f49300cd57d3127b8a2c198c3a49c177ee85fcd49c056ce606b7df4ea034103"
+      sha256 "65fa775b3d8f9f47d972a164d36ad3488def6010594b1f6cfc90f9f288080853"
     end
     on_intel do
       url "https://github.com/glnreddy421/klew/releases/download/v2.0.0/klew-cli-2.0.0-darwin-amd64.tar.gz"
-      sha256 "030205e4613387d0d857f9be29e9462aa3d0e59328237605f2c1cef1dd2d5229"
+      sha256 "11ffa8682b2518733eb92e861bb58760b27e047091d4a3a6bed060b4efe3502c"
     end
   end
 
   on_linux do
     on_arm do
       url "https://github.com/glnreddy421/klew/releases/download/v2.0.0/klew-cli-2.0.0-linux-arm64.tar.gz"
-      sha256 "79b00604707930dd7b1977d2095791b6711426f09d097615ae64ba07c7ddfd3c"
+      sha256 "d865b3b2781d369ebf5cafe2f8faac614e76d120ae95b1def2c93a62872a308e"
     end
     on_intel do
       url "https://github.com/glnreddy421/klew/releases/download/v2.0.0/klew-cli-2.0.0-linux-amd64.tar.gz"
-      sha256 "6b6e278a589700e84d49c4b4ecd76b200f4f48dac195d2fd1b516e76bf973da3"
+      sha256 "a2b57e096916db3e8bdc01d20c6b1fbcb9ff3d08fdc11f22165ebb15133fada4"
     end
   end
 

@@ -2,11 +2,11 @@ cask "klew" do
   version "2.0.0"
 
   on_arm do
-    sha256 "ff60c5c1bff5045d50cab2d2842175e801ca6b99dfb6b2c47e4c2d0e136544fb"
+    sha256 "2ec12da02f990ae9dcc0ccbed6f707a7e9181eee0d7767ce73d56d0a42e4b47a"
     url "https://github.com/glnreddy421/klew/releases/download/v2.0.0/Klew-2.0.0-macos-arm64.zip"
   end
   on_intel do
-    sha256 "3f1424816cad0c815a11bfd9dcc420d38c9bdc878988330938a55f521de557e5"
+    sha256 "8acc5dbf95162e9b1cfc4b08f749facb09082f8952e5239aac4f334414bcce21"
     url "https://github.com/glnreddy421/klew/releases/download/v2.0.0/Klew-2.0.0-macos-amd64.zip"
   end
 
